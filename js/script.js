@@ -24,7 +24,7 @@ document.getElementById('costoBase').innerHTML = 'Il prezzo del biglietto è di:
 // calcolo prezzo biglietto con sconti
 if (eta < 18) {
   prezzoScontato = (costoBase - ((costoBase * 20) / 100));
-} else if (eta > 65) {
+} else (eta > 65) {
   prezzoScontato = (costoBase - ((costoBase * 40) / 100));
 }
 console.log("Il prezzo scontato del biglietto è di:", prezzoScontato);
