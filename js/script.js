@@ -21,10 +21,13 @@ console.log ("Costo base biglietto:", costoBase);
 // stampo a video il costo finale del biglietto
 document.getElementById('costoBase').innerHTML = 'Il prezzo del biglietto è di: ' + parseFloat(costoBase).toFixed(2) + '€.';
 
+// Prezzo base per età compresa tra i 18 e 65 anni
+let prezzoScontato = costoBase;
+
 // calcolo prezzo biglietto con sconti
 if (eta < 18) {
   prezzoScontato = (costoBase - ((costoBase * 20) / 100));
-} else (eta > 65) {
+} else if (eta > 65) {
   prezzoScontato = (costoBase - ((costoBase * 40) / 100));
 }
 console.log("Il prezzo scontato del biglietto è di:", prezzoScontato);
