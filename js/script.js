@@ -17,6 +17,8 @@ console.log("età persona:", eta);
 const costoAlKm = 0.21;
 let costoBase = parseInt((costoAlKm * chilometri));
 console.log ("Costo base biglietto:", costoBase);
+
+// stampo a video il costo finale del biglietto
 document.getElementById('costoBase').innerHTML = 'Il prezzo del biglietto è di: ' + parseFloat(costoBase).toFixed(2) + '€.';
 
 // calcolo prezzo biglietto con sconti
