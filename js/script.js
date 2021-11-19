@@ -7,3 +7,26 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
+// chiedo all'utente il numero di km che vuole percorrere
+let chilometri = parseFloat(prompt ("Inserisci il numero di km che vuoi percorrere:"));
+console.log("numero di km da percorrere:", chilometri);
+let eta = parseInt(prompt ("Inserisci la tua età:"));
+console.log("età persona:", eta);
+
+// calcolo prezzo base biglietto
+const costoAlKm = 0.21;
+let costoBase = parseInt((costoAlKm * chilometri));
+console.log ("Costo base biglietto:", costoBase);
+document.getElementById('costoBase').innerHTML = 'Il prezzo del biglietto è di: ' + parseFloat(costoBase).toFixed(2) + '€.';
+
+// calcolo prezzo biglietto con sconti
+if (eta < 18) {
+  prezzoScontato = (costoBase - ((costoBase * 20) / 100));
+} else if (eta > 65) {
+  prezzoScontato = (costoBase - ((costoBase * 40) / 100));
+}
+console.log("Il prezzo scontato del biglietto è di:", prezzoScontato);
+
+// stampo a video il costo finale del biglietto
+document.getElementById('prezzoScontato').innerHTML = 'Il prezzo scontato del biglietto è di: ' + parseFloat(prezzoScontato).toFixed(2) + '€.';
+
